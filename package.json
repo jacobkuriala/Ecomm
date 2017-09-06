@@ -4,17 +4,17 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng build && node server.js",
-    "build": "ng build && node server.js",
+    "start": "node server.js",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "preinstall": "npm install && npm install -g http-server && npm install -g @angular/cli@latest",
-    "postinstall": "ng build && mv dist/* ."
+    "preinstall": "npm install -g http-server && npm install -g @angular/cli@latest",
+    "postinstall": "ng build --prod && copy .\\dist\\* .\\ /Y"
   },
   "private": true,
   "dependencies": {
-    "@angular/cli": "1.0.0",
+    "@angular/cli": "^1.0.0",
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
     "@angular/compiler-cli": "^4.0.0",
@@ -57,7 +57,7 @@
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
-    "@angular/cli": "1.0.0",
+    "@angular/cli": "^1.0.0",
     "@angular/compiler-cli": "^4.0.0",
     "@types/jasmine": "2.5.38",
     "@types/node": "~6.0.60",
