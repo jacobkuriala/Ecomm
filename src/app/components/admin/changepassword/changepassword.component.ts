@@ -10,7 +10,7 @@ import {UsersService} from "../../../services/users.service";
 export class ChangepasswordComponent implements OnInit {
 
   private requesteduuid:string = null;
-  private user:any = null;
+  public user:any = null;
   private updateresult:string ="";
   constructor(private userservice:UsersService,
   private activatedRoute: ActivatedRoute
