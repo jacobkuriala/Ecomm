@@ -1,6 +1,6 @@
 {
   "name": "mea2necomm",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -9,8 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "preinstall": "npm install -g http-server && npm install -g @angular/cli@latest",
-    "postinstall": "ng build --prod && copy .\\dist\\* .\\ /Y"
+    "preinstall": "npm uninstall -g npm && npm install -g npm@5.3 && npm uninstall -g http-server && npm install -g http-server && npm uninstall -g @angular/cli && npm cache verify && npm config set unsafe-perm=true && npm install -g @angular/cli@latest",
+    "postinstall": "ng build --prod && copy .\\dist\\* .\\  /Y"
   },
   "private": true,
   "dependencies": {
